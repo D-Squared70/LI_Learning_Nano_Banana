@@ -154,7 +154,7 @@
         }
 
         .subtitle {
-            font-size: clamp(18px, 2vw, 24px);
+            font-size: clamp(20px, 2vw, 26px);
             color: var(--gray);
             margin-bottom: 40px;
             text-align: center;
@@ -207,7 +207,7 @@
         }
 
         .icon-subtitle {
-            font-size: 14px;
+            font-size: 16px;
             color: var(--gray);
         }
 
@@ -317,13 +317,13 @@
         }
 
         .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 30px;
             width: 100%;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 40px auto;
-            justify-items: center;
         }
 
         .tool-card {
@@ -355,7 +355,7 @@
 
         .tool-price {
             color: var(--secondary);
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             margin-bottom: 10px;
             text-align: center;
@@ -363,7 +363,7 @@
 
         .tool-desc {
             color: var(--gray);
-            font-size: 16px;
+            font-size: 18px;
             line-height: 1.5;
             text-align: center;
         }
@@ -410,7 +410,7 @@
             color: white;
             padding: 8px 20px;
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -470,436 +470,157 @@
     <div class="progress-dots" id="progressDots"></div>
 
     <div class="slide-container" id="slideContainer">
-        <!-- Slide 2: Tools & Skills -->
+        <!-- Slide 2: Tools You Need -->
         <div class="slide">
             <span class="slide-number">2</span>
-            <h2>Tools You Need</h2>
+            <h2>Tools</h2>
             <div class="tools-grid">
                 <div class="tool-card">
                     <div class="tool-name">💻 Cursor Pro</div>
                     <div class="tool-price">$20/month</div>
-                    <div class="tool-desc">Where we'll build alongside AI</div>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-name">🔧 GitHub</div>
-                    <div class="tool-price">Free</div>
-                    <div class="tool-desc">Store & version your code</div>
                 </div>
                 <div class="tool-card">
                     <div class="tool-name">🤖 ChatGPT Plus</div>
                     <div class="tool-price">$20/month</div>
-                    <div class="tool-desc">Research & preparation</div>
                 </div>
                 <div class="tool-card">
                     <div class="tool-name">🔍 Perplexity Pro</div>
                     <div class="tool-price">$20/month (optional)</div>
-                    <div class="tool-desc">Enhanced research</div>
                 </div>
                 <div class="tool-card">
                     <div class="tool-name">🎨 Google AI Studio</div>
                     <div class="tool-price">$5 API credits</div>
-                    <div class="tool-desc">Nano Banana API access</div>
                 </div>
                 <div class="tool-card">
                     <div class="tool-name">🧠 Claude</div>
                     <div class="tool-price">$20/month (optional)</div>
-                    <div class="tool-desc">Blueprint creation</div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3: The Key to Vibe Coding (Merged) -->
+        <!-- Slide 3: The Preparation Process -->
         <div class="slide">
             <span class="slide-number">3</span>
-            <h1>🚀 <span class="gradient-text">The Key to Vibe Coding</span></h1>
-            <h2 style="color: var(--primary); margin-bottom: 40px;">Preparation</h2>
-            <div class="icon-grid">
-                <div class="icon-card">
-                    <div class="icon">📋</div>
-                    <div class="icon-title">The Spec (What)</div>
-                    <div class="icon-subtitle" style="margin-top: 10px;">✨ AI interviews you</div>
+            <h1>🚀 <span class="gradient-text">The Preparation Process</span></h1>
+            
+            <!-- Three-Column Layout for Preparation Steps -->
+            <div style="display: flex; justify-content: center; gap: 40px; margin: 40px 0; flex-wrap: wrap;">
+                
+                <!-- Spec Column -->
+                <div style="text-align: center; flex: 1; min-width: 280px; max-width: 320px;">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 20px;">📋 The Spec</h3>
+                    <div class="icon-card" style="padding: 25px;">
+                        <div class="emoji-icon" style="font-size: 36px;">🎤</div>
+                        <div class="icon-title" style="font-size: 18px;">AI Interview</div>
+                        <div class="icon-subtitle" style="font-size: 16px;">15-20 questions → detailed specification</div>
+                    </div>
                 </div>
-                <div class="icon-card">
-                    <div class="icon">📐</div>
-                    <div class="icon-title">The Blueprint (How)</div>
-                    <div class="icon-subtitle" style="margin-top: 10px;">✨ Phases & prompts ready</div>
+
+                <!-- Blueprint Column -->
+                <div style="text-align: center; flex: 1; min-width: 280px; max-width: 320px;">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 20px;">📐 The Blueprint</h3>
+                    <div class="icon-card" style="padding: 25px;">
+                        <div class="emoji-icon" style="font-size: 36px;">🏗️</div>
+                        <div class="icon-title" style="font-size: 18px;">Step-by-Step Plan</div>
+                        <div class="icon-subtitle" style="font-size: 16px;">Small chunks → test-driven → integrated</div>
+                    </div>
                 </div>
-                <div class="icon-card">
-                    <div class="icon">☑️</div>
-                    <div class="icon-title">The Roadmap (Todos)</div>
-                    <div class="icon-subtitle" style="margin-top: 10px;">✨ AI grounds itself</div>
+
+                <!-- Roadmap Column -->
+                <div style="text-align: center; flex: 1; min-width: 280px; max-width: 320px;">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 20px;">✅ The Roadmap</h3>
+                    <div class="icon-card" style="padding: 25px;">
+                        <div class="emoji-icon" style="font-size: 36px;">🎯</div>
+                        <div class="icon-title" style="font-size: 18px;">Action Checklist</div>
+                        <div class="icon-subtitle" style="font-size: 16px;">Memory checkpoints → clear priorities</div>
+                    </div>
                 </div>
+            
             </div>
+
         </div>
 
-        <!-- Slide 4: Job to be Done -->
+        <!-- Slide 4: Context Engineering Mastery -->
         <div class="slide">
             <span class="slide-number">4</span>
-            <h2>Define Your North Star</h2>
-            <div class="diagram">
-                <div class="icon-card" style="width: 100%; max-width: 600px;">
-                    <h3>❓ Two Critical Questions</h3>
-                    <ul class="feature-list" style="text-align: left;">
-                        <li><span class="highlight">Job to be Done:</span> What problem does it solve?</li>
-                        <li><span class="highlight">Audience:</span> Who are we building for?</li>
-                    </ul>
-                </div>
-                <div class="prompt-box" style="max-width: 600px;">
-                    <span class="prompt-label">Example</span>
-                    <div class="prompt-text"><strong>Job:</strong> Help users use Google's Nano Banana for image editing
-<strong>Audience:</strong> Non-techies using AI imagery for business</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5: Research Phase -->
-        <div class="slide">
-            <span class="slide-number">5</span>
-            <h2>🔍 Research Datasets & APIs</h2>
-            <p class="subtitle">Set your app up for success before building</p>
-            <div class="icon-grid">
-                <div class="icon-card">
-                    <div class="emoji-icon">🔍</div>
-                    <div class="icon-title">Ask AI About Potential Issues</div>
-                    <div class="icon-subtitle">What challenges might we face?</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">📚</div>
-                    <div class="icon-title">Find Latest Docs & Libraries</div>
-                    <div class="icon-subtitle">Updated APIs & code resources</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">🔗</div>
-                    <div class="icon-title">Copy Links to Your Notes</div>
-                    <div class="icon-subtitle">Fresh context for your AI team</div>
-                </div>
-            </div>
-            <div class="phase-indicator">💡 AI models have knowledge cutoffs - keep them current!</div>
-        </div>
-
-        <!-- Slide 6: AI Interview Prompt -->
-        <div class="slide">
-            <span class="slide-number">6</span>
-            <h2>🎤 AI Interview Process</h2>
-            <p class="subtitle">Let AI extract the details from you</p>
-            <div class="prompt-box">
-                <span class="prompt-label">Interview Prompt</span>
-                <div class="prompt-text">Ask me one question at a time so we can develop a thorough, step-by-step spec for an idea. Each question should build on my previous answers, and our end goal is to have a detailed specification I can hand off to a developer. Let's do this iteratively and dig into every relevant detail. Remember, only one question at a time.
-
-Here's the idea:
-&lt;IDEA&gt;
-[Your app context here]
-&lt;/IDEA&gt;</div>
-                <div class="link-placeholder">→ Link to Example Interview</div>
-            </div>
-            <p class="subtitle" style="margin-top: 20px;">💡 Answer 15-20 questions for thorough spec</p>
-        </div>
-
-        <!-- Slide 7: Compile Spec Prompt -->
-        <div class="slide">
-            <span class="slide-number">7</span>
-            <h2>📋 Compile Your Spec</h2>
-            <p class="subtitle">Transform the interview into a developer-ready specification</p>
-            <div class="prompt-box">
-                <span class="prompt-label">Spec Compilation Prompt</span>
-                <div class="prompt-text">Now that we've wrapped up the brainstorming process, can you compile our findings into a comprehensive, developer-ready specification? Include all relevant requirements, architecture choices, data handling details, error handling strategies, and a testing plan so a developer can immediately begin implementation.</div>
-                <div class="link-placeholder">→ Link to Example Spec</div>
-            </div>
-        </div>
-
-        <!-- Slide 8: Verify Your Spec -->
-        <div class="slide">
-            <span class="slide-number">8</span>
-            <h2>✅ Verify Your Spec</h2>
-            <p class="subtitle">Double-check nothing was missed from the interview</p>
-            <div class="prompt-box">
-                <span class="prompt-label">Verification Prompt</span>
-                <div class="prompt-text">Please compare the convo with the spec to ensure nothing important has been missed in the spec. If you find something that's missing from the spec that's in the convo, then rewrite the spec to be more accurate and reflect the product they're trying to create.</div>
-                <div class="link-placeholder">→ Link to Refined Spec</div>
-            </div>
-        </div>
-
-        <!-- Slide 9: Blueprint Generation -->
-        <div class="slide">
-            <span class="slide-number">9</span>
-            <h2>🏗️ Convert Spec to Blueprint</h2>
-            <p class="subtitle">Use the smartest reasoning model available</p>
-            <div class="prompt-box">
-                <span class="prompt-label">Blueprint Prompt</span>
-                <div class="prompt-text">Draft a detailed, step-by-step blueprint for building this project. Then, once you have a solid plan, break it down into small, iterative chunks that build on each other. Look at these chunks and then go another round to break it into small steps. Review the results and make sure that the steps are small enough to be implemented safely with strong testing, but big enough to move the project forward. Iterate until you feel that the steps are right sized for this project.
-
-From here you should have the foundation to provide a series of prompts for a code-generation LLM that will implement each step in a test-driven manner. Prioritize best practices, incremental progress, and early testing, ensuring no big jumps in complexity at any stage. Make sure that each prompt builds on the previous prompts, and ends with wiring things together. There should be no hanging or orphaned code that isn't integrated into a previous step.
-
-Make sure to separate each prompt section and use prompting best practices. Use markdown. Each prompt should be tagged as text using code tags. The goal is to output prompts, but context is important as well.
-
-&lt;SPEC&gt;
-[Your spec here]
-&lt;/SPEC&gt;</div>
-                <div class="link-placeholder">→ Link to Example Blueprint</div>
-            </div>
-        </div>
-
-        <!-- Slide 10: Roadmap/Todos -->
-        <div class="slide">
-            <span class="slide-number">10</span>
-            <h2>✅ Create Your Roadmap</h2>
-            <div class="prompt-box">
-                <span class="prompt-label">Todo List Prompt</span>
-                <div class="prompt-text">Can you make a `todo.md` that I can use as a checklist? Be thorough.</div>
-                <div class="link-placeholder">→ Link to Example Todos</div>
-            </div>
-            <div class="icon-grid" style="margin-top: 40px; max-width: 700px;">
-                <div class="icon-card">
-                    <div class="emoji-icon">💡</div>
-                    <div class="icon-title">Memory Checkpoints</div>
-                    <div class="icon-subtitle">Helps AI ground itself as it builds</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">📝</div>
-                    <div class="icon-title">Actionable Checklist</div>
-                    <div class="icon-subtitle">Track progress step by step</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 11: Context Engineering Title -->
-        <div class="slide">
-            <span class="slide-number">11</span>
             <h1>🎯 <span class="gradient-text">Context Engineering</span></h1>
             <p class="subtitle">Guide AI effectively & avoid endless frustration</p>
-            <div class="icon-grid" style="margin-top: 50px;">
-                <div class="icon-card">
-                    <div class="emoji-icon">📏</div>
-                    <div class="icon-title">Smart Cursor Rules</div>
-                    <div class="icon-subtitle">Minimal & project-specific</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">🔨</div>
-                    <div class="icon-title">Task Breakdowns</div>
-                    <div class="icon-subtitle">When AI fails, break it down</div>
-                </div>
-            </div>
-            <div class="phase-indicator" style="margin-top: 40px;">🌊 Wield context like a master water bender</div>
-        </div>
-
-        <!-- Slide 12: Cursor Rules -->
-        <div class="slide">
-            <span class="slide-number">12</span>
-            <h1>📏 <span class="gradient-text">Master Cursor Rules</span></h1>
-            <p class="subtitle">Build iteratively, keep them minimal & project-specific</p>
             
-            <div class="process-flow" style="margin: 50px 0;">
-                <div class="process-step" style="background: rgba(255,0,0,0.1); border-color: #ff6b6b;">
-                    <div class="emoji-icon" style="font-size: 32px;">❌</div>
-                    <div class="icon-title" style="color: #ff6b6b;">Bloated Rules</div>
-                    <div class="icon-subtitle">Copied from others</div>
-                    <div class="icon-subtitle">Irrelevant to your project</div>
+            <!-- Combined horizontal layout -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 60px; margin: 40px 0; flex-wrap: wrap;">
+                
+                <!-- Smart Rules Section -->
+                <div style="text-align: center;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">📏 Smart Cursor Rules</h3>
+                    <div class="process-flow" style="gap: 15px; margin: 0;">
+                        <div class="process-step" style="background: rgba(255,0,0,0.1); border-color: #ff6b6b; min-width: 130px; padding: 15px;">
+                            <div class="emoji-icon" style="font-size: 20px;">❌</div>
+                            <div class="icon-title" style="font-size: 16px; color: #ff6b6b;">Bloated Rules</div>
+                        </div>
+                        <span class="arrow" style="font-size: 20px;">→</span>
+                        <div class="process-step active" style="min-width: 130px; padding: 15px;">
+                            <div class="emoji-icon" style="font-size: 20px;">✅</div>
+                            <div class="icon-title" style="font-size: 16px;">Smart Rules</div>
+                        </div>
+                    </div>
                 </div>
-                <span class="arrow" style="font-size: 32px;">→</span>
-                <div class="process-step active">
-                    <div class="emoji-icon" style="font-size: 32px;">✅</div>
-                    <div class="icon-title">Smart Rules</div>
-                    <div class="icon-subtitle">Built incrementally</div>
-                    <div class="icon-subtitle">Lessons learned embedded</div>
+
+                <!-- Task Breakdown Section -->
+                <div style="text-align: center;">
+                    <h3 style="color: var(--primary); margin-bottom: 15px; font-size: 20px;">🔨 Task Breakdown</h3>
+                    <div class="process-flow" style="gap: 10px; margin: 0;">
+                        <div class="process-step" style="min-width: 100px; padding: 15px;">
+                            <div class="emoji-icon" style="font-size: 18px;">📋</div>
+                            <div class="icon-title" style="font-size: 14px;">Big Task</div>
+                        </div>
+                        <span class="arrow" style="font-size: 16px;">→</span>
+                        <div class="process-step" style="background: rgba(255,193,7,0.1); border-color: #ffc107; min-width: 100px; padding: 15px;">
+                            <div class="emoji-icon" style="font-size: 18px;">⚠️</div>
+                            <div class="icon-title" style="font-size: 14px;">Failures</div>
+                        </div>
+                        <span class="arrow" style="font-size: 16px;">→</span>
+                        <div class="process-step active" style="min-width: 100px; padding: 15px;">
+                            <div class="emoji-icon" style="font-size: 18px;">🎯</div>
+                            <div class="icon-title" style="font-size: 14px;">Micro Tasks</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="phase-indicator">💡 Rules = AI's memory of hard-won lessons</div>
-        </div>
-
-        <!-- Slide 13: Task Breakdowns -->
-        <div class="slide">
-            <span class="slide-number">13</span>
-            <h2>When AI fails 3-5 times, break it down</h2>
             
-            <div class="process-flow" style="margin: 40px 0;">
-                <div class="process-step" style="min-width: 200px;">
-                    <div class="emoji-icon">📋</div>
-                    <div class="icon-title">Macro Todo</div>
-                    <div class="icon-subtitle">Big feature or complex task</div>
-                </div>
-                
-                <span class="arrow">→</span>
-                
-                <div class="process-step" style="min-width: 200px; background: rgba(255,193,7,0.1); border-color: #ffc107;">
-                    <div class="emoji-icon">⚠️</div>
-                    <div class="icon-title">3-5 Failures</div>
-                    <div class="icon-subtitle">AI struggles repeatedly</div>
-                </div>
-                
-                <span class="arrow">→</span>
-                
-                <div class="process-step active" style="min-width: 200px;">
-                    <div class="emoji-icon">🎯</div>
-                    <div class="icon-title">Micro Todos</div>
-                    <div class="icon-subtitle">Break down + embed lessons</div>
-                </div>
             </div>
 
-            <div class="phase-indicator">💡 Fresh AI convo + summary of failures = success</div>
         </div>
 
-        <!-- Slide 14: Nano Banana Overview -->
+        <!-- Slide 5: API Documentation Demo -->
         <div class="slide">
-            <span class="slide-number">14</span>
-            <h2>🍌 What is Nano Banana?</h2>
-            <p class="subtitle">Google's new image model</p>
-            
-            <div class="icon-grid" style="margin-top: 50px; max-width: 900px;">
-                <div class="icon-card">
-                    <div class="emoji-icon">🎯</div>
-                    <div class="icon-title">Character Consistency</div>
-                    <div class="icon-subtitle">Maintain the same character across edits</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">🔀</div>
-                    <div class="icon-title">Object Combination</div>
-                    <div class="icon-subtitle">Combine multiple elements seamlessly</div>
-                </div>
-                <div class="icon-card">
-                    <div class="emoji-icon">🏠</div>
-                    <div class="icon-title">Scene Transformation</div>
-                    <div class="icon-subtitle">Transform environments and styling</div>
-                </div>
-            </div>            
+            <span class="slide-number">5</span>
+            <h1>📖 <span class="gradient-text">Nano Banana API</span></h1>
         </div>
         
-        <!-- Slide 15: Image Generation -->
+        <!-- Slide 6: App Features -->
         <div class="slide">
-            <span class="slide-number">15</span>
-            <h3>✨ Pure Image Generation</h3>
-            <p class="subtitle">Create stunning original images from text prompts</p>
-            
-            <div style="display: flex; justify-content: center; gap: 60px; margin: 60px 0; align-items: center;">
-                <div style="text-align: center;">
-                    <img src="photorealistic_example.png" alt="Photorealistic pottery craftsman in workshop" style="width: 320px; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 16px; color: var(--gray); max-width: 320px;">Photorealistic pottery craftsman</div>
-                </div>
-                
-                <div style="text-align: center;">
-                    <img src="nano-banana.png" alt="Futuristic scene with floating elements" style="width: 320px; height: 320px; object-fit: cover; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 16px; color: var(--gray); max-width: 320px;">Futuristic artistic scene</div>
-                </div>
-            </div>
-            
-            <div class="phase-indicator">Beyond editing - create entirely new images from imagination</div>
-        </div>
-        
-        <!-- Slide 16: Character Consistency Example -->
-        <div class="slide">
-            <span class="slide-number">16</span>
-            <h3>🎯 Character Consistency</h3>
-            <p class="subtitle">Add elements while maintaining the same character</p>
-            
-            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin: 60px 0;">
-                <div style="text-align: center;">
-                    <img src="cat_input.png" alt="Cat input" style="width: 280px; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 18px; color: var(--gray);">Input</div>
-                    <div style="font-size: 14px; color: var(--gray); margin-top: 5px;">Original cat photo</div>
-                </div>
-                
-                <div style="font-size: 48px; color: var(--primary);">→</div>
-                
-                <div style="text-align: center;">
-                    <img src="cat_output.png" alt="Cat with wizard hat" style="width: 280px; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 18px; color: var(--gray);">Output</div>
-                    <div style="font-size: 14px; color: var(--gray); margin-top: 5px;">Same cat + wizard hat</div>
-                </div>
-            </div>
-            
-            <div class="phase-indicator">The exact same cat with perfect consistency</div>
-        </div>
-        
-        <!-- Slide 17: Object Combination Example -->
-        <div class="slide">
-            <span class="slide-number">17</span>
-            <h3>🔀 Object Combination</h3>
-            <p class="subtitle">Combine multiple elements in new settings</p>
-            
-            <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin: 60px 0;">
-                <div style="text-align: center;">
-                    <img src="model_input.png" alt="Model input" style="width: 200px; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 15px; font-size: 16px; color: var(--gray);">Model</div>
-                </div>
-                
-                <div style="font-size: 32px; color: var(--gray);">+</div>
-                
-                <div style="text-align: center;">
-                    <img src="dress_input.png" alt="Dress input" style="width: 200px; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 15px; font-size: 16px; color: var(--gray);">Dress</div>
-                </div>
-                
-                <div style="font-size: 48px; color: var(--primary);">→</div>
-                
-                <div style="text-align: center;">
-                    <img src="model_and_dress_output.png" alt="Model in blue dress" style="width: 240px; height: 280px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 15px; font-size: 16px; color: var(--gray);">Combined Result</div>
-                </div>
-            </div>
-            
-            <div class="phase-indicator">Model wearing the dress in a completely new environment</div>
-        </div>
-        
-        <!-- Slide 18: Scene Transformation Example -->
-        <div class="slide">
-            <span class="slide-number">18</span>
-            <h3>🏠 Scene Transformation</h3>
-            <p class="subtitle">Transform environments and interior styling</p>
-            
-            <div style="display: flex; align-items: center; justify-content: center; gap: 40px; margin: 60px 0;">
-                <div style="text-align: center;">
-                    <img src="living_room_input.png" alt="Living room input" style="width: 320px; height: 240px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 18px; color: var(--gray);">Input</div>
-                    <div style="font-size: 14px; color: var(--gray); margin-top: 5px;">Original living room</div>
-                </div>
-                
-                <div style="font-size: 48px; color: var(--primary);">→</div>
-                
-                <div style="text-align: center;">
-                    <img src="living_room_output.png" alt="Living room output" style="width: 320px; height: 240px; object-fit: cover; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                    <div style="margin-top: 20px; font-size: 18px; color: var(--gray);">Output</div>
-                    <div style="font-size: 14px; color: var(--gray); margin-top: 5px;">Transformed furniture & styling</div>
-                </div>
-            </div>
-            
-            <div class="phase-indicator">Complete interior design transformation while maintaining the space</div>
-        </div>
-        
-        <!-- Slide 19: App Features -->
-        <div class="slide">
-            <span class="slide-number">19</span>
+            <span class="slide-number">6</span>
             <h2>🚀 Our Enhanced Nano Banana App</h2>
-            <p class="subtitle">Features we'll add to enhance the model and user experience</p>
             <div class="icon-grid" style="margin-top: 40px;">
                 <div class="icon-card">
                     <div class="emoji-icon">🎨</div>
                     <div class="icon-title">In-painting</div>
-                    <div class="icon-subtitle">Be able to select exactly the area you want to be changed</div>
                 </div>
                 <div class="icon-card">
                     <div class="emoji-icon">🔍</div>
                     <div class="icon-title">Image Upscaling</div>
-                    <div class="icon-subtitle">Have the option to upscale the image, since nano banana currently has a lower resolution</div>
                 </div>
                 <div class="icon-card">
                     <div class="emoji-icon">✨</div>
                     <div class="icon-title">Prompt Improver</div>
-                    <div class="icon-subtitle">Automatically have another AI improve your prompt before sending it to the image creator/editor. You'll approve before sending</div>
                 </div>
             </div>
             <div class="phase-indicator" style="margin-top: 30px;">These features will overlay on top of Google's base model</div>
         </div>
 
-        <!-- Slide 20: Building Process -->
+        <!-- Slide 7: Building Process -->
         <div class="slide">
-            <span class="slide-number">20</span>
+            <span class="slide-number">7</span>
             <h1><span class="gradient-text">Time to Build!</span></h1>
-        </div>
-
-        <!-- Slide 21: Resources -->
-        <div class="slide">
-            <span class="slide-number">21</span>
-            <h1>📚 Resources</h1>        
         </div>
 
     </div>
@@ -918,7 +639,7 @@ Make sure to separate each prompt section and use prompting best practices. Use 
 
         // Create progress dots
         function createProgressDots() {
-            const sectionStarts = [0, 2, 9, 12, 18]; // Indices where new sections start
+            const sectionStarts = [0, 2, 4, 5, 6]; // Indices where new sections start
             
             for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('div');
